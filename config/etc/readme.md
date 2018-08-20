@@ -1,3 +1,6 @@
-Files that are added or changed from their default in /etc
+Configuration files and/or changes to default config files in /etc/
 
-*** always backup existing files before changing/replacing them with files here!
+Setup static networking
+Setup timesyncd for NTP syncing (client only)
+Setup nano with helpful configurations both locally and via SSH
+Colourize prompt based on user-type and add additional information
