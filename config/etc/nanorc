@@ -254,6 +254,12 @@ include "/usr/share/nano/*.nanorc"
 ##
 ## The following five functions are not bound to any key by default.
 ## You may wish to choose different keys than the ones suggested here.
+
+## Custom bindings
+# ctrl-s to save
+# alt-c to copy highlighted text
+# alt-x to cut highlighted text
+# alt-v to paste text
 bind ^S savefile main
 bind M-C copytext main
 bind M-X cut main
