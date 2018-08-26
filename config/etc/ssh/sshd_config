@@ -1,0 +1,35 @@
+#######
+### OpenSSH Configuration
+#######
+
+### Connection settings
+Port 222
+ListenAddress your.private.ipv4.address
+ListenAddress [your:private:ipv6:address:use:square:brackets]
+TCPKeepAlive no
+ClientAliveInterval 60
+ClientAliveCountMax 30
+
+### Authentication settings
+HostKey /etc/ssh/ed25519.key
+HostKey /etc/ssh/RSA4096.key
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+AuthorizedKeysFile .ssh/authorized_keys
+
+### Login settings
+LoginGraceTime 1M
+MaxAuthTries 3
+MaxSessions 5
+#PermitRootLogin prohibit-password
+PermitRootLogin no
+
+### Program settings
+Banner /etc/ssh/banner
+LogLevel VERBOSE
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
